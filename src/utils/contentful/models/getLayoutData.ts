@@ -1,17 +1,17 @@
-export interface ILayoutData {
+import getOneContentfulData from '../getOneContentfulData'
+import { IStarTreeWebsite } from '../../../../@types/generated/contentful'
 
+export interface ILayoutData {
+  starTreeWebsite: IStarTreeWebsite
 }
 
-/**
- * See getExampleLayoutData.ts for example layout
- */
-
 const getLayoutData = async (): Promise<ILayoutData> => {
-  const [] = await Promise.all([
-
+  const [starTreeWebsite] = await Promise.all([
+    getOneContentfulData('starTreeWebsite') as Promise<IStarTreeWebsite>
   ])
 
   return {
+    starTreeWebsite
   }
 }
 

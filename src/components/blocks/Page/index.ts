@@ -21,10 +21,6 @@ const Page = styled('div')`
   @media (max-width: ${props => props.theme.breakpoints.md}) {
     grid-template-columns: 100%;
   }
-
-  @media (max-width: ${props => props.theme.breakpoints.sm}) {
-    grid-template-rows: 5px auto auto;
-  }
 `
 
 Page.Content = Content

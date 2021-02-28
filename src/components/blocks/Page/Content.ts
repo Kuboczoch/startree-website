@@ -7,10 +7,6 @@ const Content = styled('main')`
   z-index: 1;
 
   background: ${props => props.theme.colors.white};
-
-  @media (max-width: ${props => props.theme.breakpoints.sm}) {
-    margin-top: 125px;
-  }
 `
 
 export default Content
